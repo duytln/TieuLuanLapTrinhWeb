@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    font-family: roboto;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: white;
+    font-family: 'Nova Round', cursive;
+}
+
+.wrap{
+    background: rgba(0,0,0,0.5) url(./image/doankhoa.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+    background-blend-mode: overlay;
+}
+
+/*-----------------------------------------------*/
+.wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+    /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .wrapper{
+    clip-path: circle(75%);
+}
+.menu-btn{
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    /* left: 20px; */
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+    transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+    background: #fff;
+    color: #4158d0;
+    }
+#active:checked ~ .menu-btn i:before{
+    content: "\f00d";
+}
+.wrapper ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+}
+.wrapper ul li{
+    margin: 15px 0;
+}
+.wrapper ul li a{
+    color: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: #fff;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+}
+.wrapper ul li a:after{
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+    transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+    color: #4158d0;
+}
+input[type="checkbox"]{
+    display: none;
+  }
+/*-----------------------------------*/
+
+.wave{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    color: #fff;
+    opacity: 1;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 80px;
+    background: linear-gradient(to top, transparent, rgba(0,0,0,0.6));
+}
+
+header .logo{
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    float: left;
+}
+
+header .menu{
+    float: right;
+    margin-top: 5px;
+}
+
+header ul li a:hover{
+    color: peru;
+}
+
+header ul li{
+    display: inline-block;
+}
+
+header ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    margin: 0 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.content{
+    max-width: 55%;
+    padding: 200px 80px 0;
+    color: #fff;
+}
+
+.content h1{
+    font-size: 40px;
+}
+
+.content p{
+    font-size: 20px;
+    padding: 25px 0;
+    font-weight: 300;
+}
+
+.content .btn-group{
+    margin-top: 45px;
+}
+
+.content a{
+    display: inline-block;
+    padding: 15px 45px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.content a.color1{
+    background-color: #ffc107;
+}
+
+.our-partners{
+    padding: 0 80px;
+    position: relative;
+}
+
+.our-partners h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.our-partners hr{
+    border: none;
+    height: 4px;
+    width: 100px;
+    background-color: orange;
+}
+
+.our-partners-inner{
+    margin-top: 50px;
+}
+
+.our-partners-inner a{
+    display: inline-block;
+    width: 14%;
+    padding: 15px;
+    margin-right: 25px;
+    border: 1px solid #cacaca;
+    border-radius: 20px;
+    box-shadow: 0 5px 0 #cacaca;
+}
+
+.our-partners-inner img{
+    width: 25%;
+    height: 25%;
+}
